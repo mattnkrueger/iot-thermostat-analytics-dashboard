@@ -1,0 +1,13 @@
+celery==5.5.3
+dash-ag-grid==32.3.2
+dash-core-components==2.0.0
+dash-daq==0.6.0
+dash-iconify==0.1.2
+dash-mantine-components==2.3.0
+flask==3.1.0
+pandas==2.3.2
+plotly-express==0.4.1
+redis==6.4.0
+sqlalchemy==2.0.43
+psycopg2-binary>=2.9.10
+statsmodels==0.14.5
