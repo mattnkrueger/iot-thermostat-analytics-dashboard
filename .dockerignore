@@ -1,0 +1,7 @@
+**/.venv/
+**/__pycache__/
+**/*.pyc
+**/*.pyo
+**/pyproject.toml
+**/uv.lock
+**/README.md

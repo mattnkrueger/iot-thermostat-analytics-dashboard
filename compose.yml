@@ -1,0 +1,92 @@
+services:
+  redis:
+    container_name: L1-EXTENSION-redis
+    image: redis:7-alpine
+    user: root
+    command: >
+      sh -c 'mkdir -p /run/redis &&
+             chmod 777 /run/redis &&
+             exec redis-server --unixsocket /run/redis/redis.sock --unixsocketperm 777'
+    volumes:
+      - redis-socket:/run/redis
+    healthcheck:
+      test: ["CMD-SHELL", "redis-cli -s /run/redis/redis.sock ping | grep PONG"]
+      interval: 2s
+      timeout: 1s
+      retries: 15
+
+  web_application:
+    container_name: L1-EXTENSION-web-application
+    build: 
+      context: .
+      dockerfile: real-time-thermostat-analytics-dashboard-web-application/Dockerfile
+    ports:
+      - "${HOST}:${DASH_PORT}:${DASH_PORT}"
+    environment:
+      - HOST=${HOST}
+      - DASH_PORT=${DASH_PORT}
+      - SOCK=${SOCK}
+      - DB_URL=postgresql+psycopg2://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres_db:5432/${POSTGRES_DB}
+      - MODE=${MODE}
+    volumes:
+      - redis-socket:/run/redis
+    depends_on:
+      redis:
+        condition: service_healthy
+      postgres_db:
+        condition: service_started
+      stream_writer:
+        condition: service_started
+      celery_worker:
+        condition: service_started
+
+  stream_writer:
+    container_name: L1-EXTENSION-stream_writer
+    build: real-time-thermostat-analytics-dashboard-stream-writer/
+    environment:
+      - HOST=${HOST}
+      - SOCK=${SOCK}
+      - TEMPERATURE_PORT=${TEMPERATURE_PORT}
+      - MODE=${MODE}
+    volumes:
+      - redis-socket:/run/redis
+    ports:
+      - "${HOST}:${TEMPERATURE_PORT}:${TEMPERATURE_PORT}"
+    depends_on:
+      redis:
+        condition: service_healthy
+    restart: unless-stopped
+
+  celery_worker:
+    container_name: L1-EXTENSION-celery-worker
+    build: 
+      context: .
+      dockerfile: real-time-thermostat-analytics-dashboard-celery-worker/Dockerfile
+    environment:
+      - SOCK=${SOCK}
+      # - EMAIL_USER=${EMAIL_USER}    
+      # - EMAIL_PASS=${EMAIL_PASS}    
+      - DB_URL=postgresql+psycopg2://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres_db:5432/${POSTGRES_DB}
+      - MODE=${MODE}    
+    volumes:
+      - redis-socket:/run/redis
+    depends_on:
+      redis:
+        condition: service_healthy
+
+  postgres_db:
+    container_name: L1-EXTENSION-postgres
+    image: postgres:15-alpine
+    restart: always
+    environment:
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      - POSTGRES_DB=${POSTGRES_DB}
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  redis-socket:
+  pgdata:
