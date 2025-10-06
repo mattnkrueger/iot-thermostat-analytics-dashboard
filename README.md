@@ -12,7 +12,7 @@ This repository is a clone of the [ECE-Senior-Design-Lab-1-EXTENSION](https://gi
 **All images and diagrams (besides the circuit Pinout diagram and images of the finished physical box) were sourced and created by me.**
 
 [Original Embedded Code](https://github.com/Senior-Design-2025-2026/L1-embedded-thermostat) | [Original Web Application](https://github.com/Senior-Design-2025-2026/L1-web-application) 
-| [Lab Requirements](img/lab-1.pdf)
+| [ECE-Senior-Design-Lab-1-EXTENSION)](https://github.com/Senior-Design-2025-2026/ECE-Senior-Design-Lab-1-EXTENSION)
 
 # About
 To move past a prototype and build a more robust system, a second application was created with support for further iterations of the project in mind. Having already completed the base requirements, this application was focused on how we to improve the system. 
