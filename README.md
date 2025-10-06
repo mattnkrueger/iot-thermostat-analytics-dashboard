@@ -1,5 +1,11 @@
 # IoT Thermostat Analytics Dashboard
 
+<div align="center">
+  <img src="img/image-6.png" alt="Finished Product - Additional View" width="800">
+  <div><em>Web Application</em></div>
+</div>
+
+
 # NOTICE & ACCOUNTABLITIY
 This project was an extension of the Univeristy of Iowa's Senior Design, Lab 1. 
 
@@ -17,7 +23,7 @@ This repository is a clone of the [ECE-Senior-Design-Lab-1-EXTENSION](https://gi
 # About
 To move past a prototype and build a more robust system, a second application was created with support for further iterations of the project in mind. Having already completed the base requirements, this application was focused on how we to improve the system. 
 
-Keeping the embedded system the relatively unchanged, the new software application consists of five components: a dedicated entry point for streaming data (1) into a Redis cache (2), a PostgreSQL database to store temperature readings and user information (3), and an asynchronous task queue to handle processes with high overhead – such as database calls and SMTP - in the background (4), and a web application that serves a dashboard designed for mobile devices (5). The components were containerized using Docker to for ease of development, deployment, and future scalability.  
+Keeping the embedded system the relatively unchanged, the new software application consists of five components: a dedicated entry point for streaming data (1) into a Redis cache (2), a PostgreSQL database to store temperature readings and user information (3), an asynchronous task queue to handle processes with high overhead – such as database calls and SMTP - in the background (4), and a web application that serves a dashboard designed for mobile devices (5). The components were containerized using Docker to for ease of development, deployment, and future scalability.  
 
 With this extensible foundation, any smart-home application is straightforward and highly configurable; Adding an additional sensor (thermometer, humidity, air quality, etc) just means adding new endpoints to handle sensor information within the Streamer API service, creating a new stream, and creating a new table within the database. The additional sensor information can then be used for analytics and real-time operations in response to external sensor readings.  
 
