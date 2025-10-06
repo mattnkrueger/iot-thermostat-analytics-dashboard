@@ -11,15 +11,15 @@ This repository is a clone of the [ECE-Senior-Design-Lab-1-EXTENSION](https://gi
 
 **All images and diagrams (besides the circuit Pinout diagram and images of the finished physical box) were sourced and created by me.**
 
+[Original Embedded Code](https://github.com/Senior-Design-2025-2026/L1-embedded-thermostat) | [Original Web Application](https://github.com/Senior-Design-2025-2026/L1-web-application) 
+| [Lab Requirements](img/lab-1.pdf)
+
 # About
 To move past a prototype and build a more robust system, a second application was created with support for further iterations of the project in mind. Having already completed the base requirements, this application was focused on how we to improve the system. 
 
 Keeping the embedded system the relatively unchanged, the new software application consists of five components: a dedicated entry point for streaming data (1) into a Redis cache (2), a PostgreSQL database to store temperature readings and user information (3), and an asynchronous task queue to handle processes with high overhead – such as database calls and SMTP - in the background (4), and a web application that serves a dashboard designed for mobile devices (5). The components were containerized using Docker to for ease of development, deployment, and future scalability.  
 
 With this extensible foundation, any smart-home application is straightforward and highly configurable; Adding an additional sensor (thermometer, humidity, air quality, etc) just means adding new endpoints to handle sensor information within the Streamer API service, creating a new stream, and creating a new table within the database. The additional sensor information can then be used for analytics and real-time operations in response to external sensor readings.  
-
-[Original Embedded Code](https://github.com/Senior-Design-2025-2026/L1-embedded-thermostat) | [Original Web Application](https://github.com/Senior-Design-2025-2026/L1-web-application) 
-| [Lab Report](img/lab-1.pdf)
 
 ## System Architecture
 <div align="center">
