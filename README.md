@@ -67,9 +67,10 @@ With this extensible foundation, any smart-home application is straightforward a
 
 
 # View the Application Locally
-You only need to have Docker installed on your computer to run the "DUMMY DATA MODE" of the application locally. Please read the [Docker documentation](https://docs.docker.com/) on how to get started.
+You only need to have Docker installed on your computer to run the "DUMMY DATA MODE" of the application locally. Please read the [Docker documentation](https://docs.docker.com/) on installation.
 
 ## Running the Containers:
+to start the application simply run the following command
 ```
 docker compose up
 ```
