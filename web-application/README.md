@@ -1,4 +1,4 @@
-[Return to ECE-Senior-Design-Lab-1-EXTENSION -->](https://github.com/Senior-Design-2025-2026/ECE-Senior-Design-Lab-1-EXTENSION/tree/main)
+[Return to main README -->](/README.md)
 
 # L1-EXTENSION-web-application
 Plotly Dash web application designed for mobile devices to visualize sensor temperatures. Refresh rate of 1Hz.

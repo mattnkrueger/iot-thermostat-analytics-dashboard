@@ -222,17 +222,18 @@ class LivePage:
         def toggle_sensor_1(n_intervals, wanted):
             actual = self.red.get("virtual:1:status")
 
-            # testing (immediate update)
-            if self.MODE == "testing" and wanted != actual:
-                self.red.set("virtual:1:wants_toggle", "true")
-                color = "green" if wanted == "ON" else "red"
-                return False, wanted, color
-
-            # real mode (change takes effect after 1 second)
             if ctx.triggered_id == ThermostatCardAIO.ids.segmented_control("1"):
-                if wanted != actual:              
-                    self.red.set("virtual:1:wants_toggle", "true")
-                    return no_update, no_update, no_update
+                if wanted != actual:
+                    # testing (immediate update)
+                    if self.MODE == "testing":
+                        self.red.set("virtual:1:status", wanted)
+                        color = "green" if wanted == "ON" else "red"
+                        return False, wanted, color
+
+                    # real (1 sec synchronization)
+                    else:
+                        self.red.set("virtual:1:wants_toggle", "true")
+                        return no_update, no_update, no_update
 
             # device status
             status = self.red.get("systemStatus")
@@ -261,18 +262,18 @@ class LivePage:
         def toggle_sensor_2(n_intervals, wanted):
             actual = self.red.get("virtual:2:status")
 
-            # testing (immediate update)
-            if self.MODE == "testing" and wanted != actual:
-                self.red.set("virtual:2:wants_toggle", "true")
-                color = "green" if wanted == "ON" else "red"
-                return False, wanted, color
-
-            # virtualize
-            actual = self.red.get("virtual:2:status")
             if ctx.triggered_id == ThermostatCardAIO.ids.segmented_control("2"):
-                if wanted != actual:              
-                    self.red.set("virtual:2:wants_toggle", "true")
-                    return no_update, no_update, no_update
+                if wanted != actual:
+                    # testing (immediate update)
+                    if self.MODE == "testing":
+                        self.red.set("virtual:2:status", wanted)
+                        color = "green" if wanted == "ON" else "red"
+                        return False, wanted, color
+
+                    # real (1 sec synchronization)
+                    else:
+                        self.red.set("virtual:2:wants_toggle", "true")
+                        return no_update, no_update, no_update
 
             # device status
             status = self.red.get("systemStatus")
@@ -307,4 +308,3 @@ class LivePage:
             else:
                 color = "blue"
             return color, [status]
-

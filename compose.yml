@@ -19,7 +19,7 @@ services:
     container_name: L1-EXTENSION-web-application
     build: 
       context: .
-      dockerfile: real-time-thermostat-analytics-dashboard-web-application/Dockerfile
+      dockerfile: web-application/Dockerfile
     ports:
       - "${HOST}:${DASH_PORT}:${DASH_PORT}"
     environment:
@@ -42,7 +42,7 @@ services:
 
   stream_writer:
     container_name: L1-EXTENSION-stream_writer
-    build: real-time-thermostat-analytics-dashboard-stream-writer/
+    build: stream-writer/
     environment:
       - HOST=${HOST}
       - SOCK=${SOCK}
@@ -61,7 +61,7 @@ services:
     container_name: L1-EXTENSION-celery-worker
     build: 
       context: .
-      dockerfile: real-time-thermostat-analytics-dashboard-celery-worker/Dockerfile
+      dockerfile: celery-worker/Dockerfile
     environment:
       - SOCK=${SOCK}
       # - EMAIL_USER=${EMAIL_USER}    
