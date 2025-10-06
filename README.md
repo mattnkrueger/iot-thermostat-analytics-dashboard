@@ -12,7 +12,7 @@ This repository is a clone of the [ECE-Senior-Design-Lab-1-EXTENSION](https://gi
 **All images and diagrams (besides the circuit Pinout diagram and images of the finished physical box) were sourced and created by me.**
 
 # About
-To move past a prototype and build a more robust system, a second application was created with support for further iterations of the project in mind. Having already completed the base requirements, this application was purely experimental and aimed at how we could improve the system. 
+To move past a prototype and build a more robust system, a second application was created with support for further iterations of the project in mind. Having already completed the base requirements, this application was focused on how we to improve the system. 
 
 Keeping the embedded system the relatively unchanged, the new software application consists of five components: a dedicated entry point for streaming data (1) into a Redis cache (2), a PostgreSQL database to store temperature readings and user information (3), and an asynchronous task queue to handle processes with high overhead – such as database calls and SMTP - in the background (4), and a web application that serves a dashboard designed for mobile devices (5). The components were containerized using Docker to for ease of development, deployment, and scalability.  
 
