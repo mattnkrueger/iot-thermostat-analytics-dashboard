@@ -9,7 +9,7 @@
 # NOTICE & ACCOUNTABLITIY
 This project was an extension of the Univeristy of Iowa's Senior Design, Lab 1. 
 
-This extension project was ungraded and purely an experimental endeavor to explore Docker, task queues, Redis, and Postgres while strengthening my skills building dashboards. 
+This extension project was **ungraded and purely an experimental endeavor** to explore Docker, task queues, Redis, and Postgres while strengthening my skills building dashboards. 
 
 **I am responsible for 100% of the code contents within this repository**
 
