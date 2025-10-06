@@ -9,7 +9,7 @@ This extension project was ungraded and purely an experimental endeavor to explo
 
 This repository is a clone of the [ECE-Senior-Design-Lab-1-EXTENSION](https://github.com/Senior-Design-2025-2026/ECE-Senior-Design-Lab-1-EXTENSION) repository and the rest embedded code which I did not contribute to is viewable there. 
 
-**All images and diagrams (besides the circuit Pinout diagram and images of the finished physical box) sourced and created by me.**
+**All images and diagrams (besides the circuit Pinout diagram and images of the finished physical box) were sourced and created by me.**
 
 # About
 To move past a prototype and build a more robust system, a second application was created with support for further iterations of the project in mind. Having already completed the base requirements, this application was purely experimental and aimed at how we could improve the system. 
