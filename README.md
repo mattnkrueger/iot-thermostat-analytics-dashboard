@@ -29,7 +29,7 @@ With this extensible foundation, any smart-home application is straightforward a
 
 ## System Architecture
 <div align="center">
-  <img src="img/arch.png" alt="System Architecture" width="800">
+  <img src="img/arch.png" alt="System Architecture" width="1000">
   <div><em>System Architecture</em></div>
 </div>
 
