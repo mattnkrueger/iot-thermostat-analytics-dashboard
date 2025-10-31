@@ -18,6 +18,20 @@ Keeping the embedded system the relatively unchanged, the new software applicati
 
 With this extensible foundation, any smart-home application is straightforward and highly configurable; Adding an additional sensor (thermometer, humidity, air quality, etc) just means adding new endpoints to handle sensor information within the Streamer API service, creating a new stream, and creating a new table within the database. The additional sensor information can then be used for analytics and real-time operations in response to external sensor readings.  
 
+# NOTICE
+This project was an extension of the Univeristy of Iowa's Senior Design, Lab 1. 
+
+This extension project was **ungraded and purely an experimental endeavor** to explore Docker, task queues, Redis, and Postgres while strengthening my skills building dashboards. 
+
+**I am responsible for 100% of the code contents within this repository**
+
+This repository is a clone of the [ECE-Senior-Design-Lab-1-EXTENSION](https://github.com/Senior-Design-2025-2026/ECE-Senior-Design-Lab-1-EXTENSION) repository and the rest embedded code which I did not contribute to is viewable there. 
+
+**All images and diagrams (besides the circuit Pinout diagram and images of the finished physical box) were sourced and created by me.**
+
+[Original Embedded Code](https://github.com/Senior-Design-2025-2026/L1-embedded-thermostat) | [Original Web Application](https://github.com/Senior-Design-2025-2026/L1-web-application) 
+| [ECE-Senior-Design-Lab-1-EXTENSION](https://github.com/Senior-Design-2025-2026/ECE-Senior-Design-Lab-1-EXTENSION)
+
 ## Raspberry Pi Pin-Out Diagram
 <div align="center">
   <img src="img/image-3.png" alt="Raspberry Pi Pin-Out Diagram" width="800">
@@ -55,22 +69,7 @@ With this extensible foundation, any smart-home application is straightforward a
     - [celery-worker](celery-worker/README.md)  
   - Sqlalchemy ORM  
     - [postres-orm](postgres-orm/README.md)
-   
-# NOTICE
-This project was an extension of the Univeristy of Iowa's Senior Design, Lab 1. 
-
-This extension project was **ungraded and purely an experimental endeavor** to explore Docker, task queues, Redis, and Postgres while strengthening my skills building dashboards. 
-
-**I am responsible for 100% of the code contents within this repository**
-
-This repository is a clone of the [ECE-Senior-Design-Lab-1-EXTENSION](https://github.com/Senior-Design-2025-2026/ECE-Senior-Design-Lab-1-EXTENSION) repository and the rest embedded code which I did not contribute to is viewable there. 
-
-**All images and diagrams (besides the circuit Pinout diagram and images of the finished physical box) were sourced and created by me.**
-
-[Original Embedded Code](https://github.com/Senior-Design-2025-2026/L1-embedded-thermostat) | [Original Web Application](https://github.com/Senior-Design-2025-2026/L1-web-application) 
-| [ECE-Senior-Design-Lab-1-EXTENSION](https://github.com/Senior-Design-2025-2026/ECE-Senior-Design-Lab-1-EXTENSION)
-
-
+  
 # View the Application Locally
 You only need to have Docker installed on your computer to run the "DUMMY DATA MODE" of the application locally. Please read the [Docker documentation](https://docs.docker.com/) on installation.
 
