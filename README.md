@@ -5,6 +5,12 @@
   <div><em>Web Application</em></div>
 </div>
 
+<div align="center">
+  <img src="img/arch.png" alt="System Architecture" width="1000">
+  <div><em>System Architecture</em></div>
+</div>
+
+
 # About
 To move past a prototype and build a more robust system, a second application was created with support for further iterations of the project in mind. Having already completed the base requirements, this application was focused on how we to improve the system. 
 
