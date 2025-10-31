@@ -18,12 +18,6 @@ Keeping the embedded system the relatively unchanged, the new software applicati
 
 With this extensible foundation, any smart-home application is straightforward and highly configurable; Adding an additional sensor (thermometer, humidity, air quality, etc) just means adding new endpoints to handle sensor information within the Streamer API service, creating a new stream, and creating a new table within the database. The additional sensor information can then be used for analytics and real-time operations in response to external sensor readings.  
 
-## System Architecture
-<div align="center">
-  <img src="img/arch.png" alt="System Architecture" width="1000">
-  <div><em>System Architecture</em></div>
-</div>
-
 ## Raspberry Pi Pin-Out Diagram
 <div align="center">
   <img src="img/image-3.png" alt="Raspberry Pi Pin-Out Diagram" width="800">
