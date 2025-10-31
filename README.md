@@ -1,24 +1,9 @@
-# IoT Thermostat Analytics Dashboard
+# IoT Thermostat Real-Time Dashboard
 
 <div align="center">
   <img src="img/image-6.png" alt="Finished Product - Additional View" width="800">
   <div><em>Web Application</em></div>
 </div>
-
-
-# NOTICE & ACCOUNTABLITIY
-This project was an extension of the Univeristy of Iowa's Senior Design, Lab 1. 
-
-This extension project was **ungraded and purely an experimental endeavor** to explore Docker, task queues, Redis, and Postgres while strengthening my skills building dashboards. 
-
-**I am responsible for 100% of the code contents within this repository**
-
-This repository is a clone of the [ECE-Senior-Design-Lab-1-EXTENSION](https://github.com/Senior-Design-2025-2026/ECE-Senior-Design-Lab-1-EXTENSION) repository and the rest embedded code which I did not contribute to is viewable there. 
-
-**All images and diagrams (besides the circuit Pinout diagram and images of the finished physical box) were sourced and created by me.**
-
-[Original Embedded Code](https://github.com/Senior-Design-2025-2026/L1-embedded-thermostat) | [Original Web Application](https://github.com/Senior-Design-2025-2026/L1-web-application) 
-| [ECE-Senior-Design-Lab-1-EXTENSION](https://github.com/Senior-Design-2025-2026/ECE-Senior-Design-Lab-1-EXTENSION)
 
 # About
 To move past a prototype and build a more robust system, a second application was created with support for further iterations of the project in mind. Having already completed the base requirements, this application was focused on how we to improve the system. 
@@ -70,6 +55,20 @@ With this extensible foundation, any smart-home application is straightforward a
     - [celery-worker](celery-worker/README.md)  
   - Sqlalchemy ORM  
     - [postres-orm](postgres-orm/README.md)
+   
+# NOTICE
+This project was an extension of the Univeristy of Iowa's Senior Design, Lab 1. 
+
+This extension project was **ungraded and purely an experimental endeavor** to explore Docker, task queues, Redis, and Postgres while strengthening my skills building dashboards. 
+
+**I am responsible for 100% of the code contents within this repository**
+
+This repository is a clone of the [ECE-Senior-Design-Lab-1-EXTENSION](https://github.com/Senior-Design-2025-2026/ECE-Senior-Design-Lab-1-EXTENSION) repository and the rest embedded code which I did not contribute to is viewable there. 
+
+**All images and diagrams (besides the circuit Pinout diagram and images of the finished physical box) were sourced and created by me.**
+
+[Original Embedded Code](https://github.com/Senior-Design-2025-2026/L1-embedded-thermostat) | [Original Web Application](https://github.com/Senior-Design-2025-2026/L1-web-application) 
+| [ECE-Senior-Design-Lab-1-EXTENSION](https://github.com/Senior-Design-2025-2026/ECE-Senior-Design-Lab-1-EXTENSION)
 
 
 # View the Application Locally
