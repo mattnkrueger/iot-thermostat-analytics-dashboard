@@ -1,5 +1,8 @@
 # IoT Thermostat Real-Time Dashboard
 
+# BRANDING
+This project uses branding of the University of Iowa including logos and colors. PLEASE NOTE THIS PROJECT IS NOT AFFILIATED WITH THE UNIVERSITY OF IOWA. [University of Iowa Branding Manual](https://brand.uiowa.edu/logo)
+
 <div align="center">
   <img src="img/image-6.png" alt="Finished Product - Additional View" width="800">
   <div><em>Web Application</em></div>
