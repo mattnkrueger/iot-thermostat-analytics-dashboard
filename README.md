@@ -1,8 +1,5 @@
 # IoT Thermostat Real-Time Dashboard
 
-# BRANDING
-This project uses branding of the University of Iowa including logos and colors. PLEASE NOTE THIS PROJECT IS NOT AFFILIATED WITH THE UNIVERSITY OF IOWA. [University of Iowa Branding Manual](https://brand.uiowa.edu/logo)
-
 <div align="center">
   <img src="img/image-6.png" alt="Finished Product - Additional View" width="800">
   <div><em>Web Application</em></div>
@@ -22,6 +19,8 @@ Keeping the embedded system the relatively unchanged, the new software applicati
 With this extensible foundation, any smart-home application is straightforward and highly configurable; Adding an additional sensor (thermometer, humidity, air quality, etc) just means adding new endpoints to handle sensor information within the Streamer API service, creating a new stream, and creating a new table within the database. The additional sensor information can then be used for analytics and real-time operations in response to external sensor readings.  
 
 # NOTICE
+This project uses branding of the University of Iowa including logos and colors. PLEASE NOTE THIS PROJECT IS NOT AFFILIATED WITH THE UNIVERSITY OF IOWA. [University of Iowa Branding Manual](https://brand.uiowa.edu/logo)
+
 This project was an extension of the Univeristy of Iowa's Senior Design, Lab 1. 
 
 This extension project was **ungraded and purely an experimental endeavor** to explore Docker, task queues, Redis, and Postgres while strengthening my skills building dashboards. 
